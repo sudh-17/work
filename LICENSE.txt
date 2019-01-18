@@ -1,1 +1,3 @@
 暂存区stage
+
+git checkout -- .\LICENSE.txt  回退修改
