@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>es6 语法训练</title>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+        /*
+        function example1() {
+            return [1, 2, 3];
+            }
+        let [a, b, c] = example1();
+        console.log(a);
+
+        function example2() {
+            return {
+                foo: 1,
+                bar: 2
+            };
+        }
+        let { foo, bar } = example2();   
+        console.log(bar);
+
+        let jsonData = {
+            id: 42,
+            status: "OK",
+            data: [867, 5309]
+        };
+        let { id, status, data: number } = jsonData;
+        console.log(id, status, number);
+
+        const map = new Map();
+        map.set('first', 'hello');
+        map.set('second', 'world');
+
+        for (let [key, value] of map) {
+            console.log(key + " is " + value);
+        }*/
+
+        /*
+        let s = '𠮷a';
+        console.log(s.codePointAt(0).toString(16)) // 134071, toString(16)数字转十六进制
+        console.log(s.codePointAt(1).toString(16)) // 57271
+        console.log(s.codePointAt(2).toString(16)) // 97
+        console.log('\u{61}')
+        */
+
+        /*
+        let s = '𠮷a';
+        for (let ch of s) {
+            console.log(ch.codePointAt(0).toString(16));
+        }*/
+
+        /*
+        function is32Bit(c) {
+            return c.codePointAt(0) > 0xFFFF;
+        }
+        console.log(is32Bit("𠮷")) // true
+        console.log(is32Bit("a")) // false
+        */
+
+        /*
+        console.log(String.fromCodePoint(0x20BB7));
+        // "𠮷"
+        console.log(String.fromCodePoint(0x78, 0x1f680, 0x79) === 'x\uD83D\uDE80y')
+        // true*/
+
+        /*
+        let text = 'hello季节';
+        for (let i = 0 ;i < text.length;i++) {
+            console.log(text[i]);
+        }
+        for (let i of text) {
+            console.log(i);
+        }*/
+
+        /*
+        console.log('x'.repeat(3)) // "xxx"
+        console.log('hello'.repeat(2)) // "hellohello"
+        console.log('na'.repeat(0)) // ""
+        */
+
+        /* 模板字符串
+        let basket = {
+            count: 24,
+            onSale: 'shirt'
+        };
+        var div = document.createElement('div');
+        div.innerHTML = `
+            There are <b>${basket.count}</b> items
+            in your basket, <em>${basket.onSale}</em>
+            are on sale!
+        `;
+        document.querySelector('#result').appendChild(div);
+        */
+    </script>
+</body>
+</html>

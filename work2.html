@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>work2 </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div style="width: 350px;height: 200px;background: red">
+
+        <button style="position: absolute;top: 30px;left:30px;">button</button>
+    </div>
+    <script>
+        /*document.getElementsByTagName('div')[0].onclick = function(e){
+            var oEvent = e || event;
+            alert("this is div");
+            oEvent.cancelBubble = true; 
+        }
+
+        document.getElementsByTagName('button')[0].onclick = function(e){
+            var oEvent = e || event;
+            alert("this is button");
+            //oEvent.cancelBubble = true; 
+        }*/
+
+        document.getElementsByTagName('div')[0].addEventListener('click',function(){
+            alert('click div1');
+        },true)
+
+        document.getElementsByTagName('button')[0].addEventListener('click',function(){
+            alert('click button2');
+        },true)
+
+        document.getElementsByTagName('div')[0].addEventListener('click',function(e){
+            alert('click div4');
+        },false)
+
+        document.getElementsByTagName('button')[0].addEventListener('click',function(e){
+            //var oEvent = e || event;
+            alert('click button3');
+            //oEvent.cancelBubble = true;
+        },false)
+    </script>
+</body>
+</html>

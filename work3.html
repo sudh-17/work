@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>work3 </title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <style>
+            ul{
+                list-style: none;
+                width: 300px;
+            }
+            ul li{
+                list-style: none;
+                border-bottom: 1px solid #ddd;
+            }
+            ul li button{
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li data-index="0">111111111111111111 <button class="del">X</button></li>
+            <li data-index="1">122222222222222222 <button class="del">X</button></li>
+            <li data-index="2">13xxxxxxxxxxxxxxxx <button class="del">X</button></li>
+            <li data-index="3">199999999999999999 <button class="del">X</button></li>
+        </ul>
+        <button name="btnAdd">add</button>
+        <script>
+            function addAction(){
+                document.querySelector('button[name="btnAdd"]').addEventListener('click',function(){
+                    let newLi = document.createElement('li');
+                    let newBtn = document.createElement('button');
+                    newBtn.innerText = 'X';
+                    newBtn.className = 'del';
+                    newLi.innerText = 'new 555555555555555';
+                    newLi.appendChild(newBtn);
+                    let ul = document.querySelector('ul');
+                    ul.appendChild(newLi);
+                },true)
+            }
+            
+
+            function delAction(){
+                let ul = document.querySelector('ul');
+                ul.addEventListener('click',function(e){
+                    var targetEle = e.target;
+                    var potentialEle = ul.querySelectorAll('.del');
+                    //var hasMatch = Array.prototype.indexOf.call(potentialEle, targetEle) >= 0;
+                    var hasMatch = Array.from(potentialEle).indexOf(targetEle) >= 0;
+                    if(hasMatch){
+                        ul.removeChild(targetEle.parentNode)
+                    }
+                },true)
+            }
+
+            addAction();
+            delAction();
+
+        </script>
+    </body>
+</html>

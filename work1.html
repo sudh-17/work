@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>work1 </title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    </head>
+    <body onload="init()">
+        <ul>
+            <li>11</li>
+            <li>12</li>
+            <li>13</li>
+            <li>19</li>
+        </ul>
+        <script>
+        
+            
+            function init(){
+                var liArr = document.getElementsByTagName('li');
+                /*方法 1*/
+                /*
+                for(let i = 0 ;i<liArr.length;i++){
+                    liArr[i].onclick = function(e){
+                        alert(i);
+                    }
+                }*/
+                
+                /*方法 2*/
+                for(var i = 0 ;i<liArr.length;i++){
+                    (function(i){
+                        liArr[i].onclick = function(e){
+                            alert(i);
+                        }
+                    }(i));
+                }
+            }
+
+        </script>
+    </body>
+</html>

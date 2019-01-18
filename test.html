@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>test</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    </head>
+    <body>
+        <h1 class="h1">this is a h1</h1>
+        <p class="h1">this is a p</p>
+        <h2 title="h2">this is a h2</h2>
+        <h3 title="h2">this is a h3</h3>
+        <button id="btn">button</button>
+        <script>
+            "use strict";//进入"严格模式"的编译指示（pragma）
+            (function(){
+                console.log('fffff')
+            }())
+
+            console.log(name)
+            var name = 'nannn';
+
+            var qs = document.querySelector('.h1'); //只要第一个匹配的，返回单个标签
+            var qsa = document.querySelectorAll('.h1');//所有匹配的，返回一个集合
+            var ebcn = document.getElementsByClassName('h1');//所有匹配的，返回一个集合
+            console.log(qs);
+            console.log(qsa);
+            console.log(ebcn);
+            /***js 的元素选择器的用法*/
+            var one = document.querySelector('h2[title="h2"]');
+            var all = document.querySelectorAll('[title="h2"]');
+            var cc = document.querySelectorAll('h3','.h2');
+            console.log(one);
+            console.log(all);
+            console.log(cc);
+
+            /*var btn = document.querySelector('#btn','button');
+            btn.addEventListener('click',function(){
+                console.log('button is being cliking')
+            },true)*/
+
+
+            (function(w){
+                w.a = {name: 'this is test'};     
+            }(window));
+            console.log(window.a == a) //true
+
+            window.app = {};
+            window.app.Fun = function(){
+                console.log('this is a app !');
+            }
+            new app.Fun();
+
+
+        
+            function test(a,b){
+                var cc = a || function(){};
+                console.log(cc);
+            }
+            
+            //test(null,true);
+            var list = [];
+            list.push({nam:'jj',sex: 'mail'});
+            list.push({nam:'Ko',sex: 'femail'});
+            list.push({nam:'Ho',sex: 'mail'});
+            var query = {nam:'jj',sex: 'mail'};
+            var res = list.filter(function(it){
+                for(var key in query){
+                    if(query[key] != it[key]){
+                        return false;
+                    }
+                }
+                return true;
+            });
+            console.log(res)
+        </script>
+    </body>
+</html>
