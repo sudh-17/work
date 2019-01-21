@@ -5,3 +5,5 @@ git checkout -- .\LICENSE.txt  回退修改
 create a branch is sample
 
 test --no-ff
+
+git is free sofeware
