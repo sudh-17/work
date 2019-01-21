@@ -3,3 +3,5 @@
 git checkout -- .\LICENSE.txt  回退修改
 
 create a branch is sample
+
+test --on-ff
