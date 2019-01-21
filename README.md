@@ -22,7 +22,7 @@
     合并某分支到当前分支：git merge <name>
     删除分支：git branch -d <name>
     查看到分支合并图：git log --graph
-5. 多人协作：
+6. 多人协作：
     查看远程库信息，使用 git remote -v；
     本地新建的分支如果不推送到远程，对其他人就是不可见的；
     从本地推送分支，使用 git push origin branch-name，如果推送失败，先用git pull抓取远程的新提交；
